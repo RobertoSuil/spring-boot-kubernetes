@@ -11,7 +11,7 @@ pipeline {
         stage ('Initial') {
             steps {
               echo '========================================='
-              echo '                Inicializando '
+              echo '                Inicializando... '
               echo '========================================='
               sh '''
                    echo "PATH = ${PATH}"
@@ -22,7 +22,7 @@ pipeline {
         stage ('Compile') {
             steps {
                 echo '========================================='
-                echo '                Compilando '
+                echo '                Compilando... '
                 echo '========================================='
                  sh 'mvn clean compile -e'
             }
@@ -30,7 +30,7 @@ pipeline {
         stage ('Test') {
             steps {
                 echo '========================================='
-                echo '                Testeando '
+                echo '                Testeando... '
                 echo '========================================='
                 sh 'mvn clean test -e'
             }
@@ -40,7 +40,7 @@ pipeline {
         stage('SonarQube - SAST') {
            steps{
                echo '========================================='
-              echo '                SonarQube '
+              echo '                SonarQube... '
               echo '========================================='
                 script {
                     def scannerHome = tool name: 'sonar_scanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation';
