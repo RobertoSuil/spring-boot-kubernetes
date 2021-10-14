@@ -3,7 +3,6 @@ pipeline {
 
    tools {
        maven 'Maven'
-       sonarqube 'SonarQube'
     }
 
     stages {
