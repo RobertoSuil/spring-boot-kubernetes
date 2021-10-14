@@ -35,16 +35,7 @@ pipeline {
             }
         }
 
-        stage ('OWASP Dependency-Check Vulnerabilities') {  
-            steps {  
-                echo '========================================='
-                echo '                DEPENDENCY-CHECK '
-                echo '========================================='
-                sh 'mvn dependency-check:check' 
-                dependencyCheckPublisher pattern: 'target/dependency-check-report.xml'  
-            }  
-        }  
-
+        
         stage('SonarQube analysis - SAST') {
            steps{
                echo '========================================='
