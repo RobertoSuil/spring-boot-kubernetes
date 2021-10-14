@@ -34,12 +34,21 @@ pipeline {
                 sh 'mvn clean test -e'
             }
         }
-
         
-        stage('SonarQube analysis - SAST') {
+        stage ('Dependency-Check - SCA') {  
+            steps {  
+                echo '========================================='
+                echo '                Dependency Check '
+                echo '========================================='
+                sh 'mvn dependency-check:check' 
+                dependencyCheckPublisher pattern: 'target/dependency-check-report.xml'  
+            }  
+        }  
+        
+        stage('SonarQube - SAST') {
            steps{
                echo '========================================='
-              echo '                SONARQUBE '
+              echo '                SonarQube '
               echo '========================================='
                 script {
                     def scannerHome = tool 'sonar-scanner';
