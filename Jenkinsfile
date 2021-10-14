@@ -44,7 +44,7 @@ pipeline {
                 script {
                     def scannerHome = tool 'sonar-scanner';
                     withSonarQubeEnv('sonar_scanner') {
-                      sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=tarea4-devsecops -Dsonar.sources=target/ -Dsonar.host.url=http://192.168.70.142:9000 -Dsonar.login=38cd56a2546c29ba862e0554e5c9fda9a9104a57"                
+                      sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=SonarQube Homework -Dsonar.sources=target/ -Dsonar.host.url=http://192.168.70.142:9000 -Dsonar.login=38cd56a2546c29ba862e0554e5c9fda9a9104a57"                
                     }
                 }
            }
