@@ -40,8 +40,7 @@ pipeline {
                 echo '========================================='
                 echo '                Dependency Check '
                 echo '========================================='
-                sh 'mvn dependency-check:check' 
-                dependencyCheckPublisher pattern: 'target/dependency-check-report.xml'  
+                sh 'mvn org.owasp:dependency-check-maven' 
             }  
         }  
         
