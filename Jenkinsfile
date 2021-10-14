@@ -10,7 +10,7 @@ pipeline {
         stage ('Initial') {
             steps {
               echo '========================================='
-              echo '                INITIAL '
+              echo '                Inicializando '
               echo '========================================='
               sh '''
                    echo "PATH = ${PATH}"
@@ -21,7 +21,7 @@ pipeline {
         stage ('Compile') {
             steps {
                 echo '========================================='
-                echo '                COMPILE '
+                echo '                Compilando '
                 echo '========================================='
                  sh 'mvn clean compile -e'
             }
@@ -29,7 +29,7 @@ pipeline {
         stage ('Test') {
             steps {
                 echo '========================================='
-                echo '                TEST '
+                echo '                Testeando '
                 echo '========================================='
                 sh 'mvn clean test -e'
             }
