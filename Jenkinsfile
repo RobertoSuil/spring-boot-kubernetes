@@ -35,23 +35,15 @@ pipeline {
             }
         }
         
-        stage ('Dependency-Check - SCA') {  
-            steps {  
-                echo '========================================='
-                echo '                Dependency Check '
-                echo '========================================='
-                sh 'mvn org.owasp:dependency-check-maven' 
-            }  
-        }  
-        
+     
         stage('SonarQube - SAST') {
            steps{
                echo '========================================='
               echo '                SonarQube '
               echo '========================================='
                 script {
-                    def scannerHome = tool 'sonar-scanner';
-                    withSonarQubeEnv('SonarQube') {
+                    def scannerHome = tool name: 'sonar_scanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation';
+                    withSonarQubeEnv('sonar_scanner') { 
                       sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=tarea4-devsecops -Dsonar.sources=target/ -Dsonar.host.url=http://192.168.70.143:9000 -Dsonar.login=7d0f5449a0efb11571604db587cb222fea969ebc"
                     }
                 }
