@@ -5,17 +5,7 @@
     <groupId>TestMaven</groupId>
     <artifactId>TestMaven</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <repositories>
-	    <repository>
-		    <id>central</id>
-		    <name>Maven Central</name>
-		    <layout>default</layout>
-		    <url>https://mvnrepository.com/artifact/org.springframework.boot/spring-boot</url>
-		    <snapshots>
-			    <enabled>false</enabled>
-		    </snapshots>
-	    </repository>	    
-    </repositories>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -40,10 +30,10 @@
 		    <artifactId>spring-core</artifactId>
 		    <version>5.3.10</version>
 	    </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot</artifactId>
-		<version>2.5.5</version>
+	    <dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-boot</artifactId>
+		    <version>2.5.5</version>
 	    </dependency>
 	    <dependency>
                     <groupId>org.springframework</groupId>
@@ -59,7 +49,7 @@
                     <groupId>org.springframework</groupId>
                     <artifactId>spring-aspects</artifactId>
 		    <version>5.3.10</version>
-            </dependency>
+            </dependency>  
     </dependencies>
     <build>
         <sourceDirectory>src</sourceDirectory>
@@ -78,7 +68,7 @@
                                         to do -->
                                     <groupId>TestMaven</groupId>
                                     <artifactId>TestMaven</artifactId>
-                                    <version>0.0.1-SNAPSHOT</version>
+                                    <version>3.8.1-SNAPSHOT</version>
                                     <type>[ packaging ]</type>
                                     <outputDirectory>${project.build.directory}/lib</outputDirectory>
                                 </artifactItem>
@@ -93,5 +83,5 @@
                 <artifactId>maven-compiler-plugin</artifactId>
             </plugin>
         </plugins>
-    </build>	
+    </build>
 </project>
