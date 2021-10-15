@@ -68,7 +68,7 @@
                                         to do -->
                                     <groupId>TestMaven</groupId>
                                     <artifactId>TestMaven</artifactId>
-                                    <version>3.8.1-SNAPSHOT</version>
+                                    <version>3.8.1</version>
                                     <type>[ packaging ]</type>
                                     <outputDirectory>${project.build.directory}/lib</outputDirectory>
                                 </artifactItem>
