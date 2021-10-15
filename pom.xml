@@ -15,6 +15,15 @@
 			    <enabled>false</enabled>
 		    </snapshots>
 	    </repository>
+	    <repository>
+		    <id>central 2</id>
+		    <name>Maven Central 2</name>
+		    <layout>default</layout>
+		    <url>https://mvnrepository.com/artifact/org.springframework.boot/spring-boot</url>
+		    <snapshots>
+			    <enabled>false</enabled>
+		    </snapshots>
+	    </repository>	    
     </repositories>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
