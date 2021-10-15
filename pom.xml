@@ -28,7 +28,7 @@
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-core</artifactId>
 		    <version>5.2.17.RELEASE</version>
-      </dependency>
+	    </dependency>
     </dependencies>
     <build>
         <sourceDirectory>src</sourceDirectory>
