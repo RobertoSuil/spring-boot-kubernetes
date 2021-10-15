@@ -16,7 +16,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>${org.springframework.version}</version>
+            <version>4.2.5.RELEASE</version>
         </dependency>
        	<dependency>
 		    <groupId>org.projectlombok</groupId>
