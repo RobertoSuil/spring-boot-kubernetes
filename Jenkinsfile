@@ -36,7 +36,7 @@ pipeline {
             }
         }
         
-        stage('Checkeo de seguridad de aplicaaciones estáticas (SAST)...'){
+        stage('Checkeo de seguridad de aplicaciones estáticas (SAST)...'){
             steps{
                 script{
                     def scannerHome = tool 'SonarQube'
