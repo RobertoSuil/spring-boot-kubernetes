@@ -2,13 +2,13 @@ pipeline {
   agent any
 
   tools {
-    maven 'mvn-3.8.3'
+    maven 'Maven'
   }
 
   stages {
     stage('Build') {
       steps {
-        withMaven(maven : 'mvn-3.8.3') {
+        withMaven(maven : 'Maven') {
           sh "mvn package"
         }
       }
@@ -16,7 +16,7 @@ pipeline {
 
     stage ('OWASP Dependency-Check Vulnerabilities') {
       steps {
-        withMaven(maven : 'mvn-3.8.3') {
+        withMaven(maven : 'Maven') {
           sh 'mvn dependency-check:check'
         }
 
