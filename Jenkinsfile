@@ -7,7 +7,7 @@ pipeline {
     }
   
     stages {
-        stage('initial'){
+        stage('Iniciando...'){
             steps{
              sh '''
               echo "PATH = ${PATH}"
@@ -16,19 +16,19 @@ pipeline {
             }
         }
         
-        stage('Compile'){
+        stage('Compilando...'){
             steps{
                 sh 'mvn clean compile -e'
             }
         }
         
-        stage('Test'){
+        stage('Testing...'){
             steps{
                 sh 'mvn clean test -e'
             }
         }
         
-        stage('SCA'){
+        stage('Análisis de código estático (SCA)...'){
             steps{
                 sh 'mvn org.owasp:dependency-check-maven:check'
                 
@@ -36,7 +36,7 @@ pipeline {
             }
         }
         
-        stage('Sonarqube'){
+        stage('Checkeo de seguridad de aplicaaciones estáticas (SAST)...'){
             steps{
                 script{
                     def scannerHome = tool 'SonarQube'
