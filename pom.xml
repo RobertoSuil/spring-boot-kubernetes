@@ -58,6 +58,12 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
+		<dependency>
+			<groupId>org.owasp</groupId>
+			<artifactId>dependency-check-maven</artifactId>
+			<version>6.4.1</version>
+		</dependency>
 
 	</dependencies>
 
