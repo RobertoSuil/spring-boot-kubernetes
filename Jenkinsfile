@@ -39,7 +39,7 @@ pipeline {
         stage ('OWASP Dependency-Check Vulnerabilities') {  
             steps {  
                 echo '========================================='
-                echo '                DEPENDENCY-CHECK '
+                echo '                Dependency-Check '
                 echo '========================================='
                 sh 'mvn dependency-check:check' 
                 dependencyCheckPublisher pattern: 'target/dependency-check-report.xml'  
